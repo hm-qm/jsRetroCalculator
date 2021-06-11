@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Retro Calculator</title>
+</head>
+
+<body>
+    <main>
+        <div class="calc">
+            <div class="calc__main">
+                <section class="calc__top">
+                    <div class="calc__top-frame">
+                        <div class="calc__top-frame-decoration">
+                            <div class="calc__top-frame-decoration--heading">Calculator</div>
+                            <div class="calc__top-frame-decoration--solar">Solar Panel</div>
+                        </div>
+                        <div class="calc__top-display">
+                            <div class="calc__top-display--history">
+                                <p id="history">3 + 3</p>
+                            </div>
+                            <div class="calc__top-display--output">
+                                <p id="output">6</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="calc__bot">
+                    <div class="calc__bot-frame">
+                        <div class="calc__bot-keypad keypad">
+                            <div class="keypad__row keypad__row--1">
+                                <Button class="calc-key operator">AC</Button>
+                                <Button class="calc-key operator">Del</Button>
+                                <Button class="calc-key operator">/</Button>
+                            </div>
+                            <div class="keypad__row keypad__row--2">
+                                <button class="calc-key">7</button>
+                                <button class="calc-key">8</button>
+                                <button class="calc-key">9</button>
+                                <button class="calc-key operator">*</button>
+                            </div>
+                            <div class="keypad__row keypad__row--3">
+                                <button class="calc-key">4</button>
+                                <button class="calc-key">5</button>
+                                <button class="calc-key">6</button>
+                                <button class="calc-key operator">-</button>
+                            </div>
+                            <div class="keypad__row keypad__row--4">
+                                <button class="calc-key">1</button>
+                                <button class="calc-key">2</button>
+                                <button class="calc-key">3</button>
+                                <button class="calc-key operator">+</button>
+                            </div>
+                            <div class="keypad__row keypad__row--5">
+                                <button class="calc-key">0</button>
+                                <button class="calc-key operator">.</button>
+                                <button class="calc-key operator">=</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+            </div>
+        </div>
+    </main>
+</body>
+
+<script src="main.js"></script>
+
+</html>

@@ -1,0 +1,145 @@
+// $baseBody:;
+// $calcTop:;
+// $calcTopFrame:;
+// $calcDisplay
+// $calcBot:;
+// $calcBotFrame:;
+// $calcKeypad:;
+// $calcBtnNum:;
+// $calcBtnOp:;
+// $calcBtnRed:;
+
+html,
+body {
+	width: auto;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.calc {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&__main {
+		height: 800px;
+		width: 400px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		border: 1px solid black;
+	}
+
+	&__top {
+		height: 40%;
+		width: 100%;
+		border: 1px solid black;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background-color: grey;
+
+		&-frame {
+			height: 90%;
+			width: 95%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			background-color: #2c2c2c;
+			border: 1px solid black;
+
+			&-decoration {
+				height: 30%;
+				background-color: #0f1b41;
+				border: 1px solid black;
+				display: flex;
+				justify-content: space-around;
+			}
+		}
+
+		&-display {
+			height: 60%;
+			width: 100%;
+			background-color: #555555;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+			&--history {
+				height: 25%;
+				width: 95%;
+				display: flex;
+				align-items: center;
+				justify-content: flex-end;
+				background-color: antiquewhite;
+				font-size: 1.5rem;
+
+				#history {
+					padding-right: 10px;
+				}
+			}
+
+			&--output {
+				height: 65%;
+				width: 95%;
+				display: flex;
+				align-items: center;
+				justify-content: flex-end;
+				background-color: white;
+				font-size: 2.5rem;
+
+				#output {
+					padding-right: 10px;
+				}
+			}
+		}
+	}
+
+	&__bot {
+		height: 60%;
+		width: 100%;
+		border: 1px solid black;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background-color: rgb(53, 53, 53);
+
+		&-frame {
+			height: 95%;
+			width: 95%;
+			background-color: grey;
+			border: 1px solid black;
+		}
+
+		&-keypad {
+			height: 100%;
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+		}
+	}
+}
+
+.keypad {
+	&__row {
+		height: 100%;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: 1px solid black;
+
+		button {
+			font-size: 2rem;
+			height: 100%;
+			width: 100%;
+		}
+	}
+}
