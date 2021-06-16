@@ -74,7 +74,7 @@ body {
 .calc__top-display--history #history {
   padding-right: 10px;
 }
-.calc__top-display--output {
+.calc__top-display--result {
   height: 65%;
   width: 95%;
   display: flex;
@@ -83,7 +83,7 @@ body {
   background-color: white;
   font-size: 2.5rem;
 }
-.calc__top-display--output #output {
+.calc__top-display--result #result {
   padding-right: 10px;
 }
 .calc__bot {
