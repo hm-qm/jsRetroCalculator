@@ -4,27 +4,82 @@ class Calculator {
         this.resultScreenElement = resultScreenElement;
         this.allClear();
     }
+
     allClear(){
-        this.historyScreen = ""
         this.resultScreen = ""
-        console.log('allClear function activated')
+        this.historyScreen = ""
+        this.operator = undefined;
     }
+
     delete(){
         this.resultScreen = this.resultScreen.slice(0,-1);
     }
+
     appendNum(num){
+        //Allows decimal (.) to be used once per number
+
         if (num === '.' && this.resultScreen.includes('.')) return;
-        this.resultScreen = this.resultScreen + num.toString();
+
+        //convert to string to allow concatenation of number strings and not addition
+
+        this.resultScreen = this.resultScreen.toString() + num.toString(); 
     }
+
     operation(operator){
-        console.log('operation function activated');
+        
+        if (this.resultScreen === "") return
+        if (this.historyScreen !== ""){
+            this.calculate()
+        }
+
+        this.operator = operator
+        this.historyScreen = this.resultScreen
+        this.resultScreen = ""
+
     }
+    
+
     calculate(){
-        console.log('calculate function activated');
+        const firstEntry = parseFloat(this.historyScreen)
+        const lastEntry = parseFloat(this.resultScreen)
+        
+        if (isNaN(firstEntry) || isNaN(lastEntry)) return; // Operator entry validation
+
+        let calculation = null
+
+        switch (this.operator){
+            case '+':
+                calculation = firstEntry + lastEntry;
+                break;
+            case '-':
+                calculation = firstEntry - lastEntry;
+                break;
+            case '÷':
+                calculation = firstEntry / lastEntry;
+                break;
+            case '×':
+                calculation = firstEntry * lastEntry;
+                break;
+            default:
+                return
+        }
+
+        this.resultScreen = calculation.toString()
+        this.operator = null;
+        this.historyScreen = "test";
+
     }
+
     updateScreen(){
+
         this.resultScreenElement.innerText = this.resultScreen
-        console.log('updateScreen function activated');
+
+        //if operator has been selected with a number after, it will display them in the history screen
+        if(this.operator != null){
+            this.historyScreenElement.innerText = `${this.historyScreen} ${this.operator}`
+        } else {
+            this.historyScreenElement.innerText = ""
+        }
     }
 }
 
@@ -39,9 +94,9 @@ const resultScreenElement = document.querySelector('[data-result]')
 // Button selector variables
 // Intentional usage of querySelectorAll for unique buttons for array output
 
-const allClearBtn = document.querySelector('[data-all-clear]')
-const deleteBtn = document.querySelector('[data-delete]')
-const equalsBtn = document.querySelector('[data-equals]')
+const allClearBtn = document.querySelectorAll('[data-all-clear]')
+const deleteBtn = document.querySelectorAll('[data-delete]')
+const equalsBtn = document.querySelectorAll('[data-equals]')
 const operatorsBtn = document.querySelectorAll('[data-operation]')
 const numbersBtn = document.querySelectorAll('[data-number]')
 
@@ -53,35 +108,30 @@ const calc = new Calculator(historyScreenElement,resultScreenElement)
 
 
 
-// Adding event listeners to button groups, and their respective functions
+/* Function that takes in a button group, converts to array
+and adds any specified event listener to each button, 
+along with any number of class functions */
 
+const clickEvent = (someBtn, eventType = 'click', ...funcs) => {
+    const btnArr = Object.values(someBtn);
 
-operatorsBtn.forEach( button => {
-    button.addEventListener('click', () => {
-        calc.operation(button.innerText)
-        calc.updateScreen()
+    btnArr.forEach(button => {
+        button.addEventListener(eventType, (event) => {
+            funcs.forEach(func => func(event));
+        })
     })
-})
+}
 
-numbersBtn.forEach( button => {
-    button.addEventListener('click', () => {
-        calc.appendNum(button.innerText)
-        calc.updateScreen()
-    })
-})
+// Adding click event listeners to each button group with their respective Calculator class functions
 
-allClearBtn.addEventListener('click', () => {
-    calc.allClear()
-    calc.updateScreen()
-})
+clickEvent(operatorsBtn, 'click', (e) => calc.operation(e.target.innerText), () => calc.updateScreen());
 
-deleteBtn.addEventListener('click', () => {
-    calc.delete()
-    calc.updateScreen()
-})
+clickEvent(numbersBtn, 'click', (e) => calc.appendNum(e.target.innerText), () => calc.updateScreen());
 
-equalsBtn.addEventListener('click', () => {
-    calc.calculate()
-    calc.updateScreen()
-})
+clickEvent(allClearBtn, 'click', () => calc.allClear(), () => calc.updateScreen());
+
+clickEvent(deleteBtn, 'click', () => calc.delete(), () => calc.updateScreen());
+
+clickEvent(equalsBtn, 'click', () => calc.calculate(), () => calc.updateScreen());
+
 
