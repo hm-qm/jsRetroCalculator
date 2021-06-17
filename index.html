@@ -16,15 +16,23 @@
                 <section class="calc__top">
                     <div class="calc__top-frame">
                         <div class="calc__top-frame-decoration">
-                            <div class="calc__top-frame-decoration--heading">Calculator</div>
-                            <div class="calc__top-frame-decoration--solar">Solar Panel</div>
+                            <div class="calc__top-frame-decoration--heading">
+                                <span>JS Calculator</span>
+                                <span>Hesham Qasem</span>
+                            </div>
+                            <div class="calc__top-frame-decoration--solar">
+                                <div class="panel"></div>
+                                <div class="panel"></div>
+                                <div class="panel"></div>
+                                <div class="panel"></div>
+                            </div>
                         </div>
                         <div class="calc__top-display">
-                            <div class="calc__top-display--history">
+                            <div data-history class="calc__top-display--history">
                                 <p id="history">3 + 3</p>
                             </div>
-                            <div class="calc__top-display--output">
-                                <p id="output">6</p>
+                            <div data-result class="calc__top-display--result">
+                                <p id="result">6</p>
                             </div>
                         </div>
                     </div>
@@ -33,32 +41,32 @@
                     <div class="calc__bot-frame">
                         <div class="calc__bot-keypad keypad">
                             <div class="keypad__row keypad__row--1">
-                                <Button class="calc-key operator">AC</Button>
-                                <Button class="calc-key operator">Del</Button>
-                                <Button class="calc-key operator">/</Button>
+                                <Button data-all-clear class="calc-key">AC</Button>
+                                <Button data-delete class="calc-key">Del</Button>
+                                <Button data-operation class="calc-key">÷</Button>
                             </div>
                             <div class="keypad__row keypad__row--2">
-                                <button class="calc-key">7</button>
-                                <button class="calc-key">8</button>
-                                <button class="calc-key">9</button>
-                                <button class="calc-key operator">*</button>
+                                <button data-number class="calc-key">7</button>
+                                <button data-number class="calc-key">8</button>
+                                <button data-number class="calc-key">9</button>
+                                <button data-operation class="calc-key">×</button>
                             </div>
                             <div class="keypad__row keypad__row--3">
-                                <button class="calc-key">4</button>
-                                <button class="calc-key">5</button>
-                                <button class="calc-key">6</button>
-                                <button class="calc-key operator">-</button>
+                                <button data-number class="calc-key">4</button>
+                                <button data-number class="calc-key">5</button>
+                                <button data-number class="calc-key">6</button>
+                                <button data-operation class="calc-key">-</button>
                             </div>
                             <div class="keypad__row keypad__row--4">
-                                <button class="calc-key">1</button>
-                                <button class="calc-key">2</button>
-                                <button class="calc-key">3</button>
-                                <button class="calc-key operator">+</button>
+                                <button data-number class="calc-key">1</button>
+                                <button data-number class="calc-key">2</button>
+                                <button data-number class="calc-key">3</button>
+                                <button data-operation class="calc-key">+</button>
                             </div>
                             <div class="keypad__row keypad__row--5">
-                                <button class="calc-key">0</button>
-                                <button class="calc-key operator">.</button>
-                                <button class="calc-key operator">=</button>
+                                <button data-number class="calc-key">0</button>
+                                <button data-number class="calc-key">.</button>
+                                <button data-equals class="calc-key">=</button>
                             </div>
                         </div>
                     </div>
