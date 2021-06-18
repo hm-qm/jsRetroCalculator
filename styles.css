@@ -65,8 +65,20 @@ body {
   text-transform: uppercase;
   line-height: 1.5;
   color: #879196;
-  font-size: 0.8rem;
   margin: 20px 0 0 20px;
+}
+.calc__top-frame-decoration--heading #title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: "Rajdhani", sans-serif;
+}
+.calc__top-frame-decoration--heading #author {
+  font-size: 1rem;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 900;
+  color: #2f5196;
+  letter-spacing: 2px;
+  text-align: center;
 }
 .calc__top-frame-decoration--solar {
   width: 40%;
@@ -99,6 +111,7 @@ body {
   align-items: center;
   justify-content: flex-end;
   background-color: #4f6865;
+  color: #162529;
   font-size: 1rem;
   word-wrap: break-word;
   border-radius: 5px 5px 0 0;
@@ -112,6 +125,7 @@ body {
   align-items: center;
   justify-content: flex-end;
   background-color: #4f6865;
+  color: #162529;
   font-size: 2.5rem;
   word-wrap: break-word;
   border-radius: 0 0 5px 5px;
@@ -163,6 +177,7 @@ body {
   color: white;
   background: #6d7980;
   transition: all ease-in 0.09s;
+  cursor: pointer;
 }
 .keypad__row .calc-key:hover {
   background: #79868d;

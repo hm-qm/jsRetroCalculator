@@ -82,9 +82,23 @@ body {
 					text-transform: uppercase;
 					line-height: 1.5;
 					color: #879196;
-					font-size: 0.8rem;
 					// background-color: #757575;
 					margin: 20px 0 0 20px;
+
+					#title {
+						font-size: 1.1rem;
+						font-weight: 700;
+						font-family: "Rajdhani", sans-serif;
+					}
+
+					#author {
+						font-size: 1rem;
+						font-family: "Orbitron", sans-serif;
+						font-weight: 900;
+						color: #2f5196;
+						letter-spacing: 2px;
+						text-align: center;
+					}
 				}
 
 				&--solar {
@@ -122,6 +136,7 @@ body {
 				align-items: center;
 				justify-content: flex-end;
 				background-color: #4f6865;
+				color: #162529;
 				font-size: 1rem;
 				word-wrap: break-word;
 				border-radius: 5px 5px 0 0;
@@ -136,6 +151,7 @@ body {
 				align-items: center;
 				justify-content: flex-end;
 				background-color: #4f6865;
+				color: #162529;
 				font-size: 2.5rem;
 				word-wrap: break-word;
 				border-radius: 0 0 5px 5px;
@@ -196,6 +212,7 @@ body {
 			color: white;
 			background: #6d7980;
 			transition: all ease-in 0.09s;
+			cursor: pointer;
 
 			&:hover {
 				background: lighten(#6d7980, 5%);
