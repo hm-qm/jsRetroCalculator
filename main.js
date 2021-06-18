@@ -108,6 +108,14 @@ const calc = new Calculator(historyScreenElement,resultScreenElement)
 
 
 
+/* 
+
+********* All code before this line has been adapted from Web Dev Simplified - 
+********* Calculator using Vanilla JavaScript 
+
+*/
+
+
 /* Function that takes in a button group, converts to array
 and adds any specified event listener to each button, 
 along with any number of class functions */
