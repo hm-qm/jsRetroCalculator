@@ -26,10 +26,11 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #3c4349;
-  border-radius: 12px 12px 12px 12px;
-  box-shadow: 0px 0px 25px 1px #0000005d;
-  box-shadow: 0px 0px 25px 3px #0000006e;
+  background-color: #454d53;
+  border: 2px solid #2d323646;
+  border-radius: 16px 16px 16px 16px;
+  padding: 3px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07), 0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07), 0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
 }
 .calc__top {
   height: 40%;
@@ -40,7 +41,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #3c4349;
+  background-color: #373d42;
 }
 .calc__top-frame {
   height: 90%;
@@ -61,7 +62,7 @@ body {
 .calc__top-frame-decoration--heading {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   text-transform: uppercase;
   line-height: 1.5;
   color: #879196;
@@ -176,11 +177,15 @@ body {
   margin: 5px;
   color: white;
   background: #6d7980;
-  transition: all ease-in 0.09s;
+  transition: background 0.1s ease-in;
   cursor: pointer;
 }
 .keypad__row .calc-key:hover {
   background: #79868d;
+}
+.keypad__row .calc-key:focus:active {
+  background: #616c72;
+  box-shadow: inset 0px 0px 5px 1px rgba(36, 36, 36, 0.171);
 }
 .keypad__row [data-all-clear],
 .keypad__row [data-delete] {
@@ -190,6 +195,11 @@ body {
 .keypad__row [data-all-clear]:hover,
 .keypad__row [data-delete]:hover {
   background: #be3354;
+}
+.keypad__row [data-all-clear]:focus:active,
+.keypad__row [data-delete]:focus:active {
+  background: #a22c47;
+  box-shadow: inset 0px 0px 5px 1px rgba(36, 36, 36, 0.171);
 }
 
 /*# sourceMappingURL=styles.css.map */
