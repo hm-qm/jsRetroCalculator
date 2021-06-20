@@ -3,7 +3,7 @@
 <p>This is the first project I have created as part of the requirements for completing the Nology Web Dev Bootcamp.</p>
 <p>The design for this was inspired by the Casio fx-115s which is the first scientific calculator I've ever used!</p>
 
-![Image of Retro Calculator](\images\jsRetroCalc.png)
+<img src="images\jsRetroCalc.png">
 
 ## Project Specs
 
