@@ -1,9 +1,11 @@
 # Retro Calculator with Vanilla JavaScript
 
 <p>This is the first project I have created as part of the requirements for completing the Nology Web Dev Bootcamp.</p>
-<p>The design for this was inspired by the Casio fx-115s which is the first scientific calculator I've ever used!</p>
+<p>The design for this was inspired by the Casio fx-115s which is the very first scientific calculator I've ever used</p>
 
-<img src="images\jsRetroCalc.png">
+<p>
+  <img src="images\jsRetroCalc.PNG" width="500">
+ </p>
 
 ## Project Specs
 
